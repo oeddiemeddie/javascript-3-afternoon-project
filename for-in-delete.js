@@ -11,15 +11,15 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
+//  for(var key in values) {
 //   console.log(values[key])
 // }
 
@@ -41,7 +41,16 @@
 
 function showValues( obj ) {
   //Code Here
-}
+    for(let key in values) {
+    myVar.push(key)
+  }
+  return myVar;
+} 
+//   for(var key in values) {
+//     showValues.push(values[key])
+//   }
+// } //Wrong. this returns an array of the values, not a concatenation.
+
 
 
 
@@ -55,18 +64,36 @@ function showValues( obj ) {
 
 //Code Here
 
+function greaterThan10 (obj) { //console.log(obj)
+  for(var key in obj) {
+    if(obj[key] > 10) {
+      obj[key] = 0
+    }
+    //console.log(obj[key])
+  }
+  return obj
+}
 
 
 ////////// PROBLEM 3 //////////
 
 /*
   Write a function called double that takes in an object.
-  Write a for in loop that loops over the object and changes every value to be itself multipled by 2.
+  Write a for in loop that loops over the object and changes every value to be itself multiplied by 2.
   Return the updated object.
 */
 
 //Code Here
-
+function double(obj) { //console.log(obj)
+  for(var key in obj) {
+      obj[key]; {//How do we say it should loop through every object?
+        obj[key] * 2
+      } 
+    }
+    return obj
+  } 
+    
+  
 
 
 ////////// PROBLEM 4 //////////
@@ -112,6 +139,9 @@ function showValues( obj ) {
 
 //Code Here
 
+function removePassword(obj) {
+
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -130,7 +160,12 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+for (var key in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key]
+  }
+  console.log(deleteTheBigNumbers)
+}
 
 
 ////////// PROBLEM 7 //////////
